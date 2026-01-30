@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hachimi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- GENERAL RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+            overflow-x: hidden; /* Prevents horizontal scroll from the image layout */
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #fff;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #0097a7; /* Teal color */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+        }
+        
+        /* Simple icons using emoji for demonstration (replace with FontAwesome if needed) */
+        .nav-links a::before {
+            content: ''; 
+        }
+
+        /* --- HERO SECTION LAYOUT --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 8%;
+            min-height: 80vh; /* Takes up most of the screen height */
+        }
+
+        /* --- LEFT SIDE (TEXT) --- */
+        .text-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .subtitle {
+            color: #4dc3d6; /* Light teal */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            color: #008CBA;
+            margin-bottom: 20px;
+        }
+
+        /* The orange/brown accent color */
+        .highlight-orange {
+            color: #d98d5f; 
+        }
+
+        .description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 450px;
+        }
+
+        .read-more {
+            color: #008CBA;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 140, 186, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #00779e;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #008CBA;
+            border: 2px solid #008CBA;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f0f8fa;
+        }
+
+        /* --- RIGHT SIDE (IMAGE) --- */
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 50%; /* Adjust size */
+            height: auto;
+            /* This creates the curve on the left side, straight on right */
+            border-radius: 200px 0 0 200px; 
+            object-fit: cover;
+            display: block;
+        }
+
+        /* --- RESPONSIVE FOR MOBILE --- */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse; /* Stack image on top of text */
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .image-content {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 40px;
+            }
+            
+            .btn-container {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">S</div>
+        <div class="nav-links">
+            <a href="#">🏠 Home</a>
+            <a href="#">👤 About Me</a>
+            <a href="#">📞 Contact Me</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        
+        <div class="text-content">
+            <p class="subtitle">Welcome to my site</p>
+            <h1>Xin chào, tôi là Nguyễn Tấn Dũng, một<br>
+                sinh viên tại PTIT</span>
+            </h1>
+            <p class="description">
+                Tôi có niềm đam mê lớn với hệ thống máy tính, quản trị cơ sở dữ liệu và an ninh mạng. Tôi đang tìm kiếm cơ hội để xây dựng các giải pháp phần mềm hiệu quả và bảo mật. 
+            </p>
+            
+            <div class="btn-container">
+                <button class="btn btn-primary">Hachimi</button>
+                <button class="btn btn-secondary">Fatty</button>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <div class="bg-shape"></div>
+            <img src="https://github.com/Nguyendung0538/hachimi/blob/main/fatty.jpg?raw=true" 
+                 alt="Profile Picture" class="profile-img">
+        </div>
+
+    </section>
+
+</body>
+</html>
